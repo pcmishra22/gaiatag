@@ -479,6 +479,29 @@ class Users extends MX_Controller{
 				$this->template->render();
 		  	
 	}
+	//test email code
+	public function sendmail()
+	{ 
+         $from_email = "pcmishra22@hotmail.com"; 
+         $to_email = "pcmishra22@gmail.com"; 
+   
+         //Load email library 
+         $this->load->library('email'); 
+   
+         $this->email->from($from_email, 'prakash from email'); 
+         $this->email->to($to_email);
+         $this->email->subject('Email Test'); 
+         $this->email->message('Testing the email class.'); 
+   
+         //Send mail 
+         if($this->email->send()) 
+         	echo 'Email sent successfully';
+         	//$this->session->set_flashdata("email_sent","Email sent successfully."); 
+         else 
+         	echo 'Email sent successfully';
+         	//$this->session->set_flashdata("email_sent","Error in sending Email."); 
+        
+    }
   
 }
  /* End of file users.php */
