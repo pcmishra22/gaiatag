@@ -60,6 +60,46 @@ class Admin_model extends CI_Model {
 			$result = $query->result_array();
 			return @$result;
 	}
-    
+	//	//list all user'S human
+	function humanList()
+	{
+			$sql = "SELECT * FROM user_humans" ; 
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+			return @$result;	
+	}
+	//	//list all user'S human
+	function pageList()
+	{
+			$sql = "SELECT * FROM pages" ; 
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+			return @$result;	
+	}
+    //	//list all email template
+	function emailTemplateList()
+	{
+			$sql = "SELECT * FROM email_templates" ; 
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+			return @$result;	
+	}
+	//	//list all user'S human
+	function newsLetterList()
+	{
+			$sql = "SELECT * FROM newsletter" ; 
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+			return @$result;	
+	}
+	//	//list all faq list
+	function faqList()
+	{
+			$sql = "SELECT * FROM faq" ; 
+			$query = $this->db->query($sql);
+			$result = $query->result_array();
+			return @$result;	
+	}
 }
+
 

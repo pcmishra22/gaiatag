@@ -480,26 +480,78 @@ class Users extends MX_Controller{
 		  	
 	}
 	//test email code
-	public function sendmail()
-	{ 
-         $from_email = "pcmishra22@hotmail.com"; 
-         $to_email = "pcmishra22@gmail.com"; 
-   
-         //Load email library 
-         $this->load->library('email'); 
-   
-         $this->email->from($from_email, 'prakash from email'); 
-         $this->email->to($to_email);
-         $this->email->subject('Email Test'); 
-         $this->email->message('Testing the email class.'); 
-   
-         //Send mail 
-         if($this->email->send()) 
-         	echo 'Email sent successfully';
-         	//$this->session->set_flashdata("email_sent","Email sent successfully."); 
-         else 
-         	echo 'Email sent successfully';
-         	//$this->session->set_flashdata("email_sent","Error in sending Email."); 
+public function sendmail1()
+{
+	$from = 'pcmishra22@hotmail.com';
+ $to   = 'pcmishra22@gmail.com';
+ $subject = 'your subject';
+ $message = 'your message';
+
+ $this->load->library('email');
+
+ $config['mailtype'] = 'html';
+ $config['smtp_port']='465';
+ $config['smtp_timeout']='30';
+ $config['charset']='utf-8';
+ $config['protocol'] = 'smtp';
+  $config['smtp_host'] = 'smtp.gmail.com';
+   $config['smtp_user'] = 'pcmishra22@gmail.com';
+    $config['smtp_pass'] = '1234root5678';
+ //$config['mailpath'] = '/usr/sbin/sendmail';
+ $config['charset'] = 'iso-8859-1';
+ $config['wordwrap'] = TRUE;
+ $config['newline'] = "\r\n";
+
+
+
+ $this->email->initialize($config);
+ $this->email->from($from);
+ $this->email->to($to);
+ $this->email->subject($subject);
+ $this->email->message($message);
+
+ // Sending Email
+    if ($this->email->send()) {
+        	echo 'email sent successfully';
+            //$data['message'] = "Mail sent...";
+        }
+        else
+        {
+        	echo 'email not sent';
+        	echo $this->email->print_debugger();
+        }
+}	
+ public function sendmail()
+    {
+        // Email configuration
+        $config = Array(
+            'protocol' => 'smtp',
+            'smtp_host' => 'smtp.gmail.com.',
+            'smtp_port' => 465,
+            'smtp_user' => 'pcmishra22@gmail.com', // change it to yours
+            'smtp_pass' => '1234root5678', // change it to yours
+            'mailtype' => 'text/plain',
+            'charset' => 'iso-8859-1',
+            'wordwrap' => TRUE
+        );
+        
+        $this->load->library('email', $config);
+        $this->email->from('pcmishra22@gmail.com', "Admin Team");
+        $this->email->to("pcmishra22@hotmail.com");
+        $this->email->cc("sonammishra92@gmail.com");
+        $this->email->subject("This is test subject line");
+        $this->email->message("Mail sent test message...");
+        
+        $data['message'] = "Sorry Unable to send email...";
+        if ($this->email->send()) {
+        	echo 'email sent successfully';
+            //$data['message'] = "Mail sent...";
+        }
+        else
+        {
+        	echo 'email not sent';
+        	echo $this->email->print_debugger();
+        }
         
     }
   

@@ -138,37 +138,43 @@
                     <!-- Main navigation -->
                     <ul class="navigation widget">
                         <li class="active"><a href="<?php echo base_url();?>admin/dashboard" title=""><i class="icon-home"></i>Dashboard</a></li>
-                        <!--<li><a href="#" title="" class="expand"><i class="icon-reorder"></i> ROLES<strong>2</strong></a>
-                            <ul>
-                                <li><a href="<?php echo base_url();?>role/rolelist" title="">LIST ROLES</a></li>
-                                <li><a href="<?php echo base_url();?>role/add" title="">ADD ROLE</a></li>
-                            </ul>
-                        </li>-->
+                       
                          <li><a href="#" title="" class="expand"><i class="icon-reorder"></i> USERS<strong>2</strong></a>
                             <ul>
                                 <li><a href="<?php echo base_url();?>admin/userlist" title="">LIST USERS</a></li>
-                                <li><a href="<?php echo base_url();?>admin/add" title="">ADD USER</a></li>
+                                <li><a href="<?php echo base_url();?>admin/useradd" title="">ADD USER</a></li>
                             </ul>
                         </li>
-						 <!--<li><a href="#" title="" class="expand"><i class="icon-reorder"></i> MIDS<strong>2</strong></a>
+                        <li><a href="#" title="" class="expand"><i class="icon-reorder"></i> HUMANS<strong>2</strong></a>
                             <ul>
-                                <li><a href="<?php echo base_url();?>mids/midlist" title="">LIST MERCHANTS</a></li>
-                                <li><a href="<?php echo base_url();?>mids/add" title="">ADD MERCHANT</a></li>
+                                <li><a href="<?php echo base_url();?>admin/humanlist" title="">LIST HUMANS</a></li>
+                                <li><a href="<?php echo base_url();?>admin/humanadd" title="">ADD HUMANS</a></li>
                             </ul>
                         </li>
-						<li><a href="#" title="" class="expand"><i class="icon-reorder"></i> BANK PAGES<strong>2</strong></a>
+                        <li><a href="#" title="" class="expand"><i class="icon-reorder"></i>PAGES<strong>2</strong></a>
                             <ul>
-                                <li><a href="<?php echo base_url();?>banks/banklist" title="">LIST BANK PAGES</a></li>
-                                <li><a href="<?php echo base_url();?>banks/add" title="">ADD BANK PAGES</a></li>
+                                <li><a href="<?php echo base_url();?>admin/pagelist" title="">LIST PAGES</a></li>
+                                <li><a href="<?php echo base_url();?>admin/pageadd" title="">ADD PAGES</a></li>
                             </ul>
                         </li>
-						<li><a href="#" title="" class="expand"><i class="icon-reorder"></i> IBO'S<strong>2</strong></a>
+                        <li><a href="#" title="" class="expand"><i class="icon-reorder"></i> EMAIL TEMPLATE<strong>2</strong></a>
                             <ul>
-                                <li><a href="<?php echo base_url();?>ibos/ibolist" title="">LIST IBO'S</a></li>
-                                <li><a href="<?php echo base_url();?>ibos/add" title="">ADD IBO</a></li>
+                                <li><a href="<?php echo base_url();?>admin/emailtemplatelist" title="">LIST TEMPLATE</a></li>
+                                <li><a href="<?php echo base_url();?>admin/emailtemplateadd" title="">ADD TEMPLATE</a></li>
                             </ul>
-                        </li>-->
-
+                        </li>
+                        <li><a href="#" title="" class="expand"><i class="icon-reorder"></i> NEWSLETTERS<strong>2</strong></a>
+                            <ul>
+                                <li><a href="<?php echo base_url();?>admin/newsletterlist" title="">LIST NEWSLETTERS</a></li>
+                                <li><a href="<?php echo base_url();?>admin/newsletteradd" title="">ADD NEWSLETTERS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" title="" class="expand"><i class="icon-reorder"></i> FAQ<strong>2</strong></a>
+                            <ul>
+                                <li><a href="<?php echo base_url();?>admin/faqlist" title="">LIST FAQ</a></li>
+                                <li><a href="<?php echo base_url();?>admin/faqadd" title="">ADD FAQ</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <!-- /main navigation -->
 

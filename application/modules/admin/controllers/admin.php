@@ -103,6 +103,56 @@ class Admin extends MX_Controller
 		$this->template->write_view('content', 'userlist',$data);
 		$this->template->render();
 	}
+	//humanlist
+
+	public function humanlist()
+	{
+		$this->checkloginadmin();
+		$data['userlist']=$this->admin_model->humanList();
+		$this->template->write('title', 'Welcome to the gaiatag Admin userlist !');
+		$this->template->write_view('content', 'humanlist',$data);
+		$this->template->render();
+	}
+	//pagelist
+
+	public function pagelist()
+	{
+		$this->checkloginadmin();
+		$data['userlist']=$this->admin_model->pageList();
+		$this->template->write('title', 'Welcome to the gaiatag Admin userlist !');
+		$this->template->write_view('content', 'pagelist',$data);
+		$this->template->render();
+	}
+	//emailtemplatelist
+
+	public function emailtemplatelist()
+	{
+		$this->checkloginadmin();
+		$data['userlist']=$this->admin_model->emailTemplateList();
+		$this->template->write('title', 'Welcome to the gaiatag Admin userlist !');
+		$this->template->write_view('content', 'emailtemplatelist',$data);
+		$this->template->render();
+	}
+	//newsletterlist
+
+	public function newsletterlist()
+	{
+		$this->checkloginadmin();
+		$data['userlist']=$this->admin_model->newsLetterList();
+		$this->template->write('title', 'Welcome to the gaiatag Admin userlist !');
+		$this->template->write_view('content', 'newsletterlist',$data);
+		$this->template->render();
+	}
+	//faqlist
+
+	public function faqlist()
+	{
+		$this->checkloginadmin();
+		$data['userlist']=$this->admin_model->faqList();
+		$this->template->write('title', 'Welcome to the gaiatag Admin userlist !');
+		$this->template->write_view('content', 'faqlist',$data);
+		$this->template->render();
+	}
 
 }
 ?>
